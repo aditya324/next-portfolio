@@ -2,20 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+
+/* Styling the container */
+/* Styling the container */
+.slider-container {
+  width: 100%;
+  height: 60px; /* Adjusted height for the scrolling */
+  overflow: hidden;
+  position: relative;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Styling the text wrapper and creating the sliding animation */
+.slider-text {
+  display: flex;
+  flex-direction: row;
+  animation: scroll 20s linear infinite;
+}
+
+/* Styling the individual text and making sure they don't wrap */
+.quote-text {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: white;
+  padding-right: 20px;
+  white-space: nowrap;
+}
+
+/* Keyframes for continuous scrolling */
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+
+
+
+
+/* Add this to your globals.css */
+.mobile-menu {
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.mobile-menu-enter {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.mobile-menu-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mobile-menu-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mobile-menu-exit-active {
+  opacity: 0;
+  transform: translateY(-10px);
 }

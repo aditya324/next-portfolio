@@ -12,6 +12,13 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        poppins: ["var(--font-poppins)"],
+        dancing: ["var(--font-dancing)"],
+        inter: ["var(--font-inter)"],
+        roboto: ["var(--font-roboto)"],
+        roboto_mono: ["var(--font-roboto-mono)"],
+      }
     },
   },
   plugins: [],
