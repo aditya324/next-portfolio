@@ -21,7 +21,7 @@ export async function sendEmail(
 
   try {
     await resend.emails.send({
-      from: 'Your Website <onboarding@resend.dev>', 
+      from: email, 
       to: process.env.TO_EMAIL as string,
       subject: 'New Contact Form Submission',
       text: `
