@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import phone from "../../public/images/phone.png";
 import { Poppins } from "next/font/google";
 import { useRouter } from "next/navigation";
@@ -9,9 +9,9 @@ import Link from "next/link";
 const popins = Poppins({ subsets: ["latin"], weight: "300" });
 
 interface CardProps {
-  logo: string;
+  logo: StaticImageData;
   about: string;
-  banner: string;
+  banner: StaticImageData;
   route: string;
 }
 
