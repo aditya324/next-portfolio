@@ -3,12 +3,12 @@ import { Inter, Poppins } from "next/font/google";
 import Image from "next/image";
 import React from "react";
 import projectimage from "../../../../public/images/projectimage.png";
-const Slider = dynamic(() => import("react-slick"), { ssr: false });
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Card from "@/components/Card";
 import dynamic from "next/dynamic";
-
+const Slider = dynamic(() => import("react-slick"), { ssr: false });
 import biotech from "../../../../public/images/Biotech-Maali-Logo-website-use 7.png";
 import banner from "../../../../public/images/projects_cover_knolwex.png-removebg-preview 1.png";
 import mavin from "../../../../public/images/maven.png";
