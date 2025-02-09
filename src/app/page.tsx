@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Quote from "@/components/Quote";
 import WorkedWith from "@/components/WorkedWith";
@@ -10,12 +10,12 @@ import Stranger from "@/components/Stranger";
 import Contact from "@/components/Contact";
 import Banner from "@/components/Banner";
 
-const HomePage = () => {
+// Extract the logic that uses useSearchParams into a separate component
+const ScrollHandler = () => {
   const searchParams = useSearchParams();
   const [hasNavigated, setHasNavigated] = useState(false);
 
   useEffect(() => {
-    // Detect if navigation happened using Link (not a page refresh)
     const handleNavigation = () => setHasNavigated(true);
 
     window.addEventListener("popstate", handleNavigation);
@@ -40,15 +40,24 @@ const HomePage = () => {
     }
   }, [searchParams, hasNavigated]);
 
+  return null; // This component doesn't render anything
+};
+
+const HomePage = () => {
   return (
     <div>
-      <Banner/>
+      <Banner />
       <Quote />
       <WorkedWith />
 
       <div id="project">
         <Projects />
       </div>
+
+      {/* Wrap only the ScrollHandler in Suspense */}
+      <Suspense fallback={null}>
+        <ScrollHandler />
+      </Suspense>
 
       <div id="about">
         <About />
