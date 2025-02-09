@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import framer from "../../public/images/Frame 427322146.png";
+import framer from "../../public/images/bannerframe.png";
 import { Ibarra_Real_Nova, Poppins } from "next/font/google";
 
 const dance = Ibarra_Real_Nova({ subsets: ["latin"], weight: ["400", "700"] });

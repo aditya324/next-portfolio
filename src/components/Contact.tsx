@@ -3,7 +3,8 @@ import { sendEmail } from "@/actions/email";
 import { Poppins } from "next/font/google";
 import React from "react";
 import { useFormState } from "react-dom";
-import { toast } from 'react-hot-toast';
+import { toast } from "react-hot-toast";
+import { useEffect } from "react";
 
 const popins = Poppins({ subsets: ["latin"], weight: "300" });
 
@@ -12,18 +13,21 @@ interface EmailResponse {
   message: string;
 }
 const Contact = () => {
- 
   const [state, formAction] = useFormState<EmailResponse, FormData>(sendEmail, {
     success: false,
-    message: '',
+    message: "",
   });
 
-if(state.success) {
-  toast.success(state.message);
-}
-else if(state.message) {
-  toast.error(state.message);
-}
+  useEffect(() => {
+    if (state.message) {
+      if (state.success) {
+        toast.success(state.message);
+      } else {
+        toast.error(state.message);
+      }
+    }
+  }, [state]);
+
   return (
     <div className="flex justify-center bg-white text-black  px-4 sm:px-6 md:px-3 lg:px-20 lg:pt-10">
       {/* Container for text and form */}
@@ -91,8 +95,8 @@ else if(state.message) {
               >
                 Send Message
               </button>
+              
             </div>
-           
           </form>
         </div>
       </div>

@@ -2,6 +2,8 @@
 import React from "react";
 import { Poppins } from "next/font/google";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
+import Image from "next/image";
+import about from "../../public/images/about.png";
 
 const popins = Poppins({ subsets: ["latin"], weight: ["400", "500"] });
 
@@ -11,10 +13,11 @@ const About = () => {
       {/* Container for image and text */}
       <div className="flex flex-col lg:flex-row max-w-5xl w-full lg:max-h-[594px]">
         {/* Image container */}
-        <div className="flex-shrink-0 lg:mr-8 mb-8 lg:mb-0">
+        <div className="flex-shrink-0 lg:mr-8 mb-12 lg:mb-0 ">
         <p className="text-3xl font-medium" style={{ fontFamily: popins.style.fontFamily }}>About</p>
           <div>
-            <div className="w-full lg:w-[400px] h-[300px] lg:h-[380px] bg-[#C6C6C6] flex items-center justify-center"></div>
+            {/* <div className="w-full lg:w-[400px] h-[300px] lg:h-[380px] bg-[#C6C6C6] flex items-center justify-center"></div> */}
+          <Image src={about} alt="App Screenshot" width={400} height={380} className="pt-5"/>
           </div>
         </div>
 
