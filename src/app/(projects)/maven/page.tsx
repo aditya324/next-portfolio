@@ -298,10 +298,10 @@ const Page = () => {
             <div className="flex justify-center items-center ">
               <iframe
                 
-                width="600"
-                height="750"
+                width="450"
+                height="600"
                 src="https://embed.figma.com/proto/ZqD2kB940tRunqxkDrbHkw/Move-On-Wheels---customer-side?node-id=1918-21680&amp;scaling=scale-down-width&amp;content-scaling=fixed&amp;page-id=420%3A17561&amp;starting-point-node-id=1918%3A21680&amp;embed-host=share"
-                
+                className="mb-5"
                 sandbox="allow-same-origin allow-scripts allow-pointer-lock allow-forms allow-popups"
               ></iframe>
             </div>
