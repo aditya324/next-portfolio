@@ -48,7 +48,7 @@ export default function RootLayout({
           <div className="container mx-auto flex justify-between h-full px-4">
             {/* Logo on the left */}
             <div className="flex items-center">
-              <Link href="/home" className="text-xl font-bold  ">
+              <Link href="/" className="text-xl font-bold  ">
                 <Image src={logo} alt="Logo" width={90} height={90} className="lg:w-24 lg:h-24 h-16 w-16" />
               </Link>
             </div>

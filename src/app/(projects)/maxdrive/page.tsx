@@ -52,36 +52,42 @@ const Page = () => {
       about:
         "BiotechMaali's Online Plant Store offers a seamless, eco-friendly shopping experience with curated plants, tools, and sustainable solutions.",
       banner: banner,
+      route:  "/biotech"
     },
     {
       logo: mavin,
       about:
         "MoveonWheels offers a seamless, eco-friendly bike rental experience with flexible plans, well-maintained bikes, and hassle-free booking.",
       banner: banner2,
+      route:  "/maven"
     },
     {
       logo: mavin,
       about:
         "MoveonWheels offers a seamless, eco-friendly bike rental experience with flexible plans, well-maintained bikes, and hassle-free booking.",
       banner: banner,
+      route:  "/mavenwebsite"
     },
     {
       logo: biotech,
       about:
         "BiotechMaali's Online Plant Store offers a seamless, eco-friendly shopping experience with curated plants, tools, and sustainable solutions.",
       banner: banner3,
+      route:  "/biotechweb"
     },
     {
       logo: max,
       about:
         "MaxDrive streamlines bike engine oil sales with easy order management, garage registration, invoicing, and exclusive offers for sales teams.",
       banner: banner3,
+      route:  "/maxdrive"
     },
     {
       logo: itbaga,
       about:
         "ITdaga empowers tech professionals with innovative tools, resources, and a collaborative platform for seamless learning and engagement.",
       banner: banner3,
+      route:  "/itdaga"
     },
   ];
 
@@ -263,7 +269,11 @@ const Page = () => {
             className="font-light text-sm md:text-base lg:text-lg p-2 md:p-4"
             style={{ fontFamily: poppins.style.fontFamily }}
           >
-            Helped shape an app that was widely appreciated for its simplicity and functionality, resulting in a 40% boost in sales team productivity. The app enhanced order accuracy, reduced processing times, and improved overall customer satisfaction, making MaxDrive an indispensable tool for sales operations.
+            Helped shape an app that was widely appreciated for its simplicity
+            and functionality, resulting in a 40% boost in sales team
+            productivity. The app enhanced order accuracy, reduced processing
+            times, and improved overall customer satisfaction, making MaxDrive
+            an indispensable tool for sales operations.
           </p>
         </div>
 
@@ -313,6 +323,7 @@ const Page = () => {
                   logo={project.logo}
                   about={project.about}
                   banner={project.banner}
+                  route={project.route}
                 />
               );
             })}
