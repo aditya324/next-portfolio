@@ -295,11 +295,11 @@ const Page = () => {
 
           {/* Project Image Container */}
           <div className="bg-[#FDF9F8] border-[#ECECEC] border-4 w-full h-auto md:h-[710px] p-4 md:p-8 lg:px-56">
-            <div className="flex justify-center items-center h-full">
+            <div className="flex justify-center items-center ">
               <iframe
                 
-                width="1000"
-                height="800"
+                width="600"
+                height="750"
                 src="https://embed.figma.com/proto/ZqD2kB940tRunqxkDrbHkw/Move-On-Wheels---customer-side?node-id=1918-21680&amp;scaling=scale-down-width&amp;content-scaling=fixed&amp;page-id=420%3A17561&amp;starting-point-node-id=1918%3A21680&amp;embed-host=share"
                 
                 sandbox="allow-same-origin allow-scripts allow-pointer-lock allow-forms allow-popups"
