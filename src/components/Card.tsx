@@ -13,7 +13,8 @@ interface CardProps {
   logo?: StaticImageData;
   about?: string;
   banner?: StaticImageData;
-  route?: string;
+  
+  route: string;
 }
 
 const Card: React.FC<CardProps> = ({ logo, about, banner, route,key }) => {

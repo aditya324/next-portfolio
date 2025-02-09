@@ -323,7 +323,7 @@ const Page = () => {
                   logo={project.logo}
                   about={project.about}
                   banner={project.banner}
-                  route={project.route|| "/"}
+                  route={project.route as string}
                 />
               );
             })}
