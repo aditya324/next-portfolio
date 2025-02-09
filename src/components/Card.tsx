@@ -9,13 +9,14 @@ import Link from "next/link";
 const popins = Poppins({ subsets: ["latin"], weight: "300" });
 
 interface CardProps {
-  logo: StaticImageData;
-  about: string;
-  banner: StaticImageData;
-  route: string;
+  key?: number;
+  logo?: StaticImageData;
+  about?: string;
+  banner?: StaticImageData;
+  route?: string;
 }
 
-const Card: React.FC<CardProps> = ({ logo, about, banner, route }) => {
+const Card: React.FC<CardProps> = ({ logo, about, banner, route,key }) => {
 
 
   console.log(route, "route");
