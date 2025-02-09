@@ -52,23 +52,23 @@ const WorkedWith = () => {
       </div>
       <div className="w-full border border-y-4   p-5">
         <div className=" mx-auto overflow-hidden">
-          {typeof window !== 'undefined' && (
-            <Slider {...settings}>
-              {images.map((image, index) => (
-                <div key={index} className="h-16 flex items-center justify-center">
-                  <div className="px-4 flex items-center justify-center h-full">
-                    <Image
-                      src={image.src}
-                      alt={image.alt}
-                      width={150}
-                      height={60}
-                      className="object-contain w-auto h-20 mt-10"
-                    />
-                  </div>
-                </div>
-              ))}
-            </Slider>
-          )}
+          {
+             <Slider {...settings}>
+             {images.map((image, index) => (
+               <div key={index} className="h-16 flex items-center justify-center">
+                 <div className="px-4 flex items-center justify-center h-full">
+                   <Image
+                     src={image.src}
+                     alt={image.alt}
+                     width={150}
+                     height={60}
+                     className="object-contain w-auto h-20 mt-10"
+                   />
+                 </div>
+               </div>
+             ))}
+           </Slider>
+          }
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import React from "react";
 import { Poppins } from "next/font/google";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";

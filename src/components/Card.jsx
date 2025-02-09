@@ -4,13 +4,16 @@ import phone from "../../public/images/phone.png";
 import { Poppins } from "next/font/google";
 
 const popins = Poppins({ subsets: ["latin"], weight: "300" });
+
+
+
 const Card = () => {
   
   return (
     <div className="relative w-full lg:w-[450px] md:w-[320px] h-[551px] bg-white rounded-t-xl shadow-lg border border-gray-200 overflow-hidden group">
       {/* Top Content */}
       <div className="p-6 z-10 relative">
-        <p className="text-2xl font-bold">Logo</p>
+        <Image/>
         <p className={`lg:text-lg test-base font-normal text-[#343434] leading-relaxed mt-2 font-${popins.className}`} 
         style={{ fontFamily: popins.style.fontFamily }}
         >
