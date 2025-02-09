@@ -10,9 +10,9 @@ const popins = Poppins({ subsets: ["latin"], weight: "300" });
 
 interface CardProps {
   key?: number;
-  logo?: StaticImageData;
+  logo: StaticImageData;
   about?: string;
-  banner?: StaticImageData;
+  banner: StaticImageData;
   
   route: string;
 }
