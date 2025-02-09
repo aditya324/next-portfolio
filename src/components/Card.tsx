@@ -20,7 +20,7 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ logo, about, banner, route,key }) => {
 
 
-  console.log(route, "route");
+
 
   const router=useRouter()
 
