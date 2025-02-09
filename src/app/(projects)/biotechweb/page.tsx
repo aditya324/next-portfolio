@@ -52,42 +52,42 @@ const Page = () => {
       about:
         "BiotechMaali's Online Plant Store offers a seamless, eco-friendly shopping experience with curated plants, tools, and sustainable solutions.",
       banner: banner,
-      route:  "/biotech"
+      route: "/biotech",
     },
     {
       logo: mavin,
       about:
         "MoveonWheels offers a seamless, eco-friendly bike rental experience with flexible plans, well-maintained bikes, and hassle-free booking.",
       banner: banner2,
-      route:  "/maven"
+      route: "/maven",
     },
     {
       logo: mavin,
       about:
         "MoveonWheels offers a seamless, eco-friendly bike rental experience with flexible plans, well-maintained bikes, and hassle-free booking.",
       banner: banner,
-      route:  "/mavenwebsite"
+      route: "/mavenwebsite",
     },
     {
       logo: biotech,
       about:
         "BiotechMaali's Online Plant Store offers a seamless, eco-friendly shopping experience with curated plants, tools, and sustainable solutions.",
       banner: banner3,
-      route:  "/biotechweb"
+      route: "/biotechweb",
     },
     {
       logo: max,
       about:
         "MaxDrive streamlines bike engine oil sales with easy order management, garage registration, invoicing, and exclusive offers for sales teams.",
       banner: banner3,
-      route:  "/maxdrive"
+      route: "/maxdrive",
     },
     {
       logo: itbaga,
       about:
         "ITdaga empowers tech professionals with innovative tools, resources, and a collaborative platform for seamless learning and engagement.",
       banner: banner3,
-      route:  "/itdaga"
+      route: "/itdaga",
     },
   ];
 
@@ -290,13 +290,12 @@ const Page = () => {
           {/* Project Image Container */}
           <div className="bg-[#FDF9F8] border-[#ECECEC] border-4 w-full h-auto md:h-[710px] p-4 md:p-8 lg:px-56">
             <div className="flex justify-center items-center h-full">
-              <Image
-                src={projectimage}
-                alt="projectimage"
-                width={700}
-                height={700}
-                className=" object-contain"
-              />
+              <iframe
+                
+                width="1000"
+                height="450"
+                src="https://embed.figma.com/proto/5cVerx1YVek5mRGlFhUN5T/Biotech-Malli(OG)?node-id=147-10427&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=147%3A10427&embed-host=share"
+              ></iframe>
             </div>
           </div>
         </div>

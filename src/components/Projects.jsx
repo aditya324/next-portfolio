@@ -76,7 +76,7 @@ const Projects = () => {
       </div>
 
       {/* Grid Layout for Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:ml-8 ml-0 lg:px-12 px-5 gap-5 lg:gap-10 pt-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3  lg:ml-8 ml-0 lg:px-12 px-5 gap-5 xl:gap-10 2xl:gap-12 pt-5">
         {projects.map((project, index) => (
           <Card
             key={index}

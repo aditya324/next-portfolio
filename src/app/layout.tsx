@@ -40,7 +40,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={``}
       >
         <Toaster position="top-right" />
         {/* Navbar with reduced height on small screens */}
