@@ -23,7 +23,7 @@ const inter = Inter({ subsets: ["latin"], weight: "500" });
 const Page = () => {
   const settings = {
     infinite: true,
-    speed: 500,
+    speed: 100,
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
@@ -90,6 +90,12 @@ const Page = () => {
       route: "/itdaga",
     },
   ];
+  const handleScrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <div className="bg-white text-black min-h-screen flex flex-col justify-start px-4 md:px-8 lg:px-12 lg:mt-0 md:mt-0 mt-10">
@@ -144,7 +150,7 @@ const Page = () => {
         </p>
 
         {/* Test Project Prototype Button */}
-        <button className="border p-2 mt-5 rounded-md border-gray-500 md:w-[280px] w-[250px] h-[51px] bg-white text-black relative shadow-[4px_4px_0px_black] hover:shadow-[6px_6px_0px_black] transition-all ml-2 md:ml-4">
+        <button onClick={() => handleScrollToSection("prototype")} className="border p-2 mt-5 rounded-md border-gray-500 md:w-[280px] w-[250px] h-[51px] bg-white text-black relative shadow-[4px_4px_0px_black] hover:shadow-[6px_6px_0px_black] transition-all ml-2 md:ml-4">
           Test Project Prototype
         </button>
 
@@ -280,7 +286,7 @@ const Page = () => {
         {/* Repeat similar structure for other sections... */}
 
         {/* Test Project Prototype Section */}
-        <div className="w-full">
+        <div className="w-full" id="prototype">
           <p
             className="font-light text-2xl md:text-3xl text-center p-2 md:p-4"
             style={{ fontFamily: poppins.style.fontFamily }}
@@ -295,7 +301,6 @@ const Page = () => {
           <div className="bg-[#FDF9F8] border-[#ECECEC] border-4 w-full h-auto md:h-[710px] p-4 md:p-8 lg:px-56">
             <div className="flex justify-center items-center h-full">
               <iframe
-               
                 width="800"
                 height="450"
                 src="https://embed.figma.com/proto/HR2VkGujhK9mE6iBch5J1q/Maxdrive?node-id=2-8&p=f&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A8&embed-host=share"

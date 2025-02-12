@@ -67,7 +67,7 @@ const Projects = () => {
           Featured Projects
         </p>
         <p
-          className="font-light lg:text-2xl text-lg pt-4 "
+          className="font-light lg:text-[18px] lg:leading-[33px] text-[12px] leading-[17px] pt-4 "
           style={{ fontFamily: popins.style.fontFamily }}
         >
           Find out about my works: read through my case studies, have a look at

@@ -23,7 +23,7 @@ const inter = Inter({ subsets: ["latin"], weight: "500" });
 const Page = () => {
   const settings = {
     infinite: true,
-    speed: 500,
+    speed: 100,
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
@@ -91,6 +91,14 @@ const Page = () => {
     },
   ];
 
+
+  const handleScrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="bg-white text-black min-h-screen flex flex-col justify-start px-4 md:px-8 lg:px-12 lg:mt-0 md:mt-0 mt-10">
       {/* Project Name */}
@@ -142,7 +150,8 @@ const Page = () => {
         </p>
 
         {/* Test Project Prototype Button */}
-        <button className="border p-2 mt-5 rounded-md border-gray-500 md:w-[280px] w-[250px] h-[51px] bg-white text-black relative shadow-[4px_4px_0px_black] hover:shadow-[6px_6px_0px_black] transition-all ml-2 md:ml-4">
+        <button className="border p-2 mt-5 rounded-md border-gray-500 md:w-[280px] w-[250px] h-[51px] bg-white text-black relative shadow-[4px_4px_0px_black] hover:shadow-[6px_6px_0px_black] transition-all ml-2 md:ml-4"
+        onClick={() => handleScrollToSection("prototypess")}>
           Test Project Prototype
         </button>
 
@@ -276,7 +285,7 @@ const Page = () => {
         {/* Repeat similar structure for other sections... */}
 
         {/* Test Project Prototype Section */}
-        <div className="w-full">
+        <div className="w-full" id="prototype">
           <p
             className="font-light text-2xl md:text-3xl text-center p-2 md:p-4"
             style={{ fontFamily: poppins.style.fontFamily }}

@@ -9,7 +9,7 @@ import Link from "next/link";
 const popins = Poppins({ subsets: ["latin"], weight: "300" });
 
 interface CardProps {
-  key?: number;
+
   logo: StaticImageData;
   about?: string;
   banner: StaticImageData;
@@ -17,7 +17,7 @@ interface CardProps {
   route: string;
 }
 
-const Card: React.FC<CardProps> = ({ logo, about, banner, route,key }) => {
+const Card: React.FC<CardProps> = ({ logo, about, banner, route }) => {
 
 
 
@@ -31,7 +31,7 @@ const Card: React.FC<CardProps> = ({ logo, about, banner, route,key }) => {
   
 
   return (
-    <div className="relative w-full lg:w-[450px] md:w-[320px] h-[551px] bg-white rounded-t-xl shadow-lg border border-gray-200 overflow-hidden group">
+    <div className="relative w-full 2xl:w-[450px] xl:w-[380px] lg:w-[380px] md:w-[320px] h-[551px] bg-white rounded-t-xl shadow-lg border border-gray-200 overflow-hidden group">
       {/* Top Content */}
       <div className="p-6 z-10 relative">
         <Image src={logo} alt="App Screenshot" width={100} height={100} />

@@ -4,11 +4,13 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "../../public/images/Logo.png";
+import logo from "../../public/images/footer.jpg";
+import navbarlogo from "../../public/images/Logo.png"
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { FaInstagram, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import { Toaster } from "react-hot-toast";
+import svg from "../../public/images/SVG.png"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -49,7 +51,7 @@ export default function RootLayout({
             {/* Logo on the left */}
             <div className="flex items-center">
               <Link href="/" className="text-xl font-bold  ">
-                <Image src={logo} alt="Logo" width={90} height={90} className="lg:w-24 lg:h-24 h-16 w-16" />
+                <Image src={navbarlogo} alt="Logo" width={90} height={90} className="lg:w-24 lg:h-24 h-16 w-16" />
               </Link>
             </div>
 
@@ -77,7 +79,7 @@ export default function RootLayout({
             </div>
 
             {/* Centered Links (Hidden on small screens) */}
-            <div className="hidden md:flex mt-2 items-center bg-[#202020] h-12 rounded-lg text-lg">
+            <div className="hidden md:flex mt-5 items-center  bg-[#202020] h-12 rounded-lg text-lg">
               <button
                 onClick={() => handleScrollToSection("project")}
                 className="text-gray-400 hover:text-white px-4"
@@ -151,8 +153,8 @@ export default function RootLayout({
   {/* Flex container for logo, email/mobile, and icons */}
   <div className="flex flex-col lg:flex-row items-center justify-between">
     {/* Logo on the left */}
-    <div className="flex-shrink-0 mb-4 lg:mb-0">
-      <Image src={logo} alt="Logo" width={50} height={50} />
+    <div className="flex-shrink-0 mb-4 lg:mb-0  rounded-lg">
+      <Image src={logo} alt="Logo" width={100} height={100} />
     </div>
 
     {/* Email and Mobile in the center */}
@@ -178,8 +180,11 @@ export default function RootLayout({
   {/* Footer text */}
   
 </div>
-<div className="flex flex-col lg:flex-row justify-between text-lg font-medium mt-6 mx-4 lg:mx-10 text-center lg:text-left">
-    <p className="mb-2 lg:mb-0">Crafted with ❤️ by Mallikjan</p>
+<div className="flex flex-col lg:flex-row justify-between pb-10 text-lg font-medium mt-6 mx-4 lg:mx-10 text-center lg:text-left">
+    <div className="flex flex-col relative">
+    <p className="mb-2 lg:mb-0">Crafted with ❤️ by Creative Mallikjan</p>
+    <Image src={svg} alt="Logo" width={150} height={150} className="mb-2 lg:mb-0 lg:ml-40 ml-0 absolute top-2" />
+    </div>
     <p>© {new Date().getFullYear()} Mallikjan. All rights reserved.</p>
   </div>
       </body>
